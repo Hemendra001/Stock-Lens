@@ -35,3 +35,8 @@ This project is open source. Feel free to use and contribute.
 Made with ❤️ by <a href="https://github.com/Hemendra001">Hemendra Kumar</a>
 </div>
 
+
+## StockLens dashboard update
+
+Open [StockLens](https://stocklens-xope.onrender.com/) for separate demat accounts, combined family holdings, and the Research desk. See the [setup and usage guide](GUIDE.md) for broker connections, CSV imports, analysis methods, deployment, and data limitations. Third-party methods are credited in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+

@@ -1,6 +1,7 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 const root=new URL('../',import.meta.url), assets={};
-for(const [file,path,type] of [['page.html','/index.html','text/html; charset=utf-8'],['styles.css','/styles.css','text/css; charset=utf-8'],['app.js','/app.js','text/javascript; charset=utf-8'],['demo.js','/demo.js','text/javascript; charset=utf-8'],['engine.js','/engine.js','text/javascript; charset=utf-8'],['longterm.js','/longterm.js','text/javascript; charset=utf-8']]) assets[path]={type,body:await readFile(new URL('src/'+file,root),'utf8')};
+for(const [file,path,type] of [['page.html','/index.html','text/html; charset=utf-8'],['styles.css','/styles.css','text/css; charset=utf-8'],['app.js','/app.js','text/javascript; charset=utf-8'],['demo.js','/demo.js','text/javascript; charset=utf-8'],['engine.js','/engine.js','text/javascript; charset=utf-8'],['longterm.js','/longterm.js','text/javascript; charset=utf-8'],['portfolio.js','/portfolio.js','text/javascript; charset=utf-8'],['research.js','/research.js','text/javascript; charset=utf-8']]) assets[path]={type,body:await readFile(new URL('src/'+file,root),'utf8')};
+assets['/notices.txt']={type:'text/plain; charset=utf-8',body:await readFile(new URL('THIRD_PARTY_NOTICES.md',root),'utf8')};
 const brokers=(await readFile(new URL('src/brokers.js',root),'utf8')).replace(/^export /gm,'');
 const server=await readFile(new URL('src/server.js',root),'utf8');
 await mkdir(new URL('worker/',root),{recursive:true});
