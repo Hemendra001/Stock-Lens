@@ -1,0 +1,16 @@
+{
+  "name": "stocklens",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/bundle.mjs && bash scripts/build.sh",
+    "build:render": "node scripts/bundle.mjs",
+    "validate": "node scripts/validate-artifact.mjs",
+    "test": "node --test src/*.test.js",
+    "start": "node scripts/dev.mjs",
+    "start:render": "node scripts/serve.mjs"
+  },
+  "engines": { "node": ">=22 <25" },
+  "version": "1.0.0",
+  "description": "Private Indian-market research dashboard with read-only broker adapters"
+}

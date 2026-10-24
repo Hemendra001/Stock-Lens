@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#153f36"><title>StockLens — A clearer view of your portfolio</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="app"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modal-root"></div>
+  <input type="file" id="holdings-file" accept=".csv,text/csv" hidden>
+  <input type="file" id="candles-file" accept=".csv,text/csv" hidden>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

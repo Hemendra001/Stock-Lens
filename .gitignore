@@ -1,0 +1,8 @@
+dist/
+site.tar.gz
+.env
+.env.*
+.dev.vars
+.DS_Store
+node_modules/
+*.log
