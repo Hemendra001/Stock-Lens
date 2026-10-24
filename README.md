@@ -85,8 +85,8 @@ Free workflow: import your own holdings and an OHLCV CSV for each stock. At leas
 
 ## Verification and hosting status
 
-Automated unit and nonvisual application tests pass. Browser automation was disabled in the authoring environment, so visual layout and real browser interaction remain unverified. No live broker credentials were provided, so authenticated Kite/Groww integration still needs account testing.
+All 62 automated tests passed in Render's production build. The hosted dashboard, Connections page and Kite connection dialog were checked in a real browser. HTTPS checks passed for the health endpoint, HTML, CSS and JavaScript; an empty same-origin broker request correctly returned a validation error. No live broker credentials were provided, so authenticated Kite/Groww integration still needs account testing.
 
-Render deployment preparation is in progress. No live Render URL is claimed until the service is deployed and verified. The earlier Sites project identity is retained only in the authoring checkout; Render does not need it.
+StockLens is live at https://stocklens-xope.onrender.com/ (verified 24 October 2026), deployed from commit `bf0b3b9d1af30e1979e6163e6e67f53bf734f15a` in https://github.com/Hemendra001/StokeLen. Render service `srv-dbe70c1srm7s73b4j790` runs on the Free plan in Singapore in My Workspace. The deployment dashboard is https://dashboard.render.com/web/srv-dbe70c1srm7s73b4j790. Health check: `/healthz`; automatic deployments: on commit. The earlier Sites project identity is retained only in the authoring checkout; Render does not need it.
 
-The standalone StockLens.html runs demo and CSV analysis directly in a browser, with no Node install. Direct broker APIs require this local server because they need same-origin requests and credentials; the HTML clearly explains this.
+The standalone StockLens.html runs demo and CSV analysis directly in a browser, with no Node install. Direct broker APIs require the local server or the hosted Render app because they need a server for same-origin requests; the standalone HTML explains this.
